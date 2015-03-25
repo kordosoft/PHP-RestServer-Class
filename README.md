@@ -42,8 +42,8 @@ Also, new in this version, instead of passing in the class to expose via the Res
 	}
 
     $rest = new RestServer();
-    $rest->addServiceClass(Hello);
-    $rest->addServiceClass(Goodbye);
+    $rest->addServiceClass('Hello');
+    $rest->addServiceClass('Goodbye'); //$rest->addServiceClass(Goodbye); => this will return an notice and you don't want that in an web service
     $rest->handle();
 ```
 
